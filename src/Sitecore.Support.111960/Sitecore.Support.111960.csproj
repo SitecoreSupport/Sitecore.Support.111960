@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\Sitecore.Support.111960.config" />
-    <Content Include="Shell\Applications\Override\Aliases.xml" />
+    <Content Include="sitecore\shell\Override\Aliases.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

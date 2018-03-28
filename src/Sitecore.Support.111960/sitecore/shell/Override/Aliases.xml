@@ -3,7 +3,7 @@
   <Aliases>
     <FormDialog Icon="Network/24x24/spy.png" Header="Aliases" Text="Add or remove URL aliases for the current item." CancelButton="false">
 
-      <CodeBeside Type="Sitecore.Shell.Applications.ContentManager.Dialogs.Aliases.AliasesForm, Sitecore.Client"/>
+      <CodeBeside Type="Sitecore.Shell.Applications.ContentManager.Dialogs.Aliases.AliasesForm,Sitecore.Client"/>
 
       <Stylesheet>
         .optionButtons {

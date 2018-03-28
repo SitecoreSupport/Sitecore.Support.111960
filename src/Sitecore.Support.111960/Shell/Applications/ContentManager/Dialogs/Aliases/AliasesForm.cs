@@ -70,7 +70,7 @@
         this._path = new ListString(value, '/');
       }
     }
-   
+
     /// <summary>
     /// Handles a click on the Add button.
     /// </summary>
