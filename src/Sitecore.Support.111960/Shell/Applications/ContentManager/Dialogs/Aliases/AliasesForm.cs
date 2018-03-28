@@ -99,7 +99,15 @@
         }
         Item itemFromQueryString = UIUtil.GetItemFromQueryString(Context.ContentDatabase);
         Error.AssertItemFound(itemFromQueryString);
-        Item item = Context.ContentDatabase.GetItem("/sitecore/system/Aliases");
+        #region Modified code
+        Globalization.Language languageOfItemFromQueryString = itemFromQueryString.Language; 
+        languageOfItemFromQueryString = languageOfItemFromQueryString ?? Sitecore.Context.Language; 
+        Item item = Context.ContentDatabase.GetItem("/sitecore/system/Aliases", languageOfItemFromQueryString);
+        if (item?.Versions.Count == 0)
+        {
+          item.Versions.AddVersion();
+        }
+        #endregion
         Error.AssertItemFound(item, "/sitecore/system/Aliases");
         ListItem listItem = CreateAlias(aliasInfo, itemFromQueryString, item);
         if (listItem != null)
