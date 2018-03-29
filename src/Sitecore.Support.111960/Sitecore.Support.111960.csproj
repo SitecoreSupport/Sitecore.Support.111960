@@ -61,7 +61,6 @@
     <Compile Include="Shell\Applications\ContentManager\Dialogs\Aliases\AliasesForm.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zzz\Sitecore.Support.111960.config" />
     <Content Include="sitecore\shell\Override\Aliases.xml" />
   </ItemGroup>
   <ItemGroup>
