@@ -7,7 +7,6 @@ using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.SecurityModel;
-using Sitecore.Shell.Applications.ContentManager.Dialogs.Aliases;
 using Sitecore.Shell.Framework;
 using Sitecore.Text;
 using Sitecore.Web.UI.HtmlControls;
@@ -120,7 +119,7 @@ namespace Sitecore.Support.Shell.Applications.ContentManager.Dialogs.Aliases
         }
         Item itemFromQueryString = UIUtil.GetItemFromQueryString(Context.ContentDatabase);
         Error.AssertItemFound(itemFromQueryString);
-        Item item = Context.ContentDatabase.GetItem("/sitecore/system/Aliases");
+        Item item = Context.ContentDatabase.GetItem("/sitecore/system/Aliases", itemFromQueryString.Language);
         Error.AssertItemFound(item, "/sitecore/system/Aliases");
         ListItem listItem = CreateAlias(aliasInfo, itemFromQueryString, item);
         if (listItem != null)
